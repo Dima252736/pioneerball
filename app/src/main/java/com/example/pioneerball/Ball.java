@@ -1,17 +1,22 @@
 package com.example.pioneerball;
 
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 
+
 public class Ball {
     public float x, y;
+    Bitmap image;
     public float vx = 5, vy = 5;
     public float radius = 30;
 
-    public Ball(float x, float y) {
+
+    public Ball(float x, float y, Bitmap image) {
         this.x = x;
         this.y = y;
+        this.image = image;
     }
 
     public void update() {
@@ -37,5 +42,6 @@ public class Ball {
     public void draw(Canvas canvas, Paint paint) {
         paint.setColor(Color.GREEN);
         canvas.drawCircle(x, y, radius, paint);
+        canvas.drawBitmap(image, x - image.getWidth()/2, y - image.getHeight()/2, paint);
     }
 }

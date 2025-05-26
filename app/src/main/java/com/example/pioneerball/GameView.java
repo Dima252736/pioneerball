@@ -64,11 +64,12 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
 
     private void resetGame() {
+        Bitmap image = BitmapFactory.decodeResource(getResources(), R.drawable.ball1);
         Bitmap image1 = BitmapFactory.decodeResource(getResources(), R.drawable.player111);
         Bitmap image2 = BitmapFactory.decodeResource(getResources(), R.drawable.player222);
         player1 = new Player(500, 600, Color.BLUE, image1);
         player2 = new Player(1720, 600, Color.RED, image2);
-        ball = new Ball(1110, 500);
+        ball = new Ball(1110, 500, image);
         gameOver = false;
         winnerText = "";
         startTime = System.currentTimeMillis();
