@@ -1,6 +1,8 @@
 // Player.java
 package com.example.pioneerball;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
@@ -9,11 +11,14 @@ public class Player {
     public int color;
     public float radius = 50;
     private float speed = 10;
+    Bitmap image;
 
-    public Player(float x, float y, int color) {
+    public Player(float x, float y, int color, Bitmap image) {
         this.x = x;
         this.y = y;
         this.color = color;
+        this.image = image;
+
     }
 
     public void move(boolean left, boolean right, boolean up, boolean down) {
@@ -28,5 +33,6 @@ public class Player {
     public void draw(Canvas canvas, Paint paint) {
         paint.setColor(color);
         canvas.drawCircle(x, y, radius, paint);
+        canvas.drawBitmap(image, x - image.getWidth()/2, y - image.getHeight()/2, paint);
     }
 }

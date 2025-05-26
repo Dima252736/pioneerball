@@ -1,6 +1,8 @@
 package com.example.pioneerball;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -62,8 +64,10 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback {
 
 
     private void resetGame() {
-        player1 = new Player(500, 600, Color.BLUE);
-        player2 = new Player(1720, 600, Color.RED);
+        Bitmap image1 = BitmapFactory.decodeResource(getResources(), R.drawable.player111);
+        Bitmap image2 = BitmapFactory.decodeResource(getResources(), R.drawable.player222);
+        player1 = new Player(500, 600, Color.BLUE, image1);
+        player2 = new Player(1720, 600, Color.RED, image2);
         ball = new Ball(1110, 500);
         gameOver = false;
         winnerText = "";
