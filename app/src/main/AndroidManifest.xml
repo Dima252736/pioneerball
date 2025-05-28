@@ -12,16 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pioneerball"
         tools:targetApi="31">
+        <activity android:name=".GameActivity"  />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".RulesActivity" />
         <activity
-            android:name=".GameActivity"
-            android:screenOrientation="landscape"
+            android:name=".MainMenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
     </application>
 
 </manifest>

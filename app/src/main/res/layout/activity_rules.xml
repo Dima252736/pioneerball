@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/text_rules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Правила игры довольно просты: игра предназначена для двух игроков, каждый из которых сможет управлять своим героем с помощью стрелок в своём нижнем углу экрана. Цель обоих игроков — забить своему противнику 5 голов, но если в течение одной минуты никто не забивает, то игра считается законченной, а победителем становится тот, кто к данному моменту набрал больше очков. Если же к моменту истечения времени у игроков одинаковое количество очков, то партия считается ничейной. Игрок забивает гол, если мяч касается стенки его противника. Это все правила, приятной игры!"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_back_rules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Назад в меню" />
+</LinearLayout>

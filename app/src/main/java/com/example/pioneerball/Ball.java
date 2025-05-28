@@ -41,7 +41,7 @@ public class Ball {
 
     public void draw(Canvas canvas, Paint paint) {
         paint.setColor(Color.GREEN);
-        canvas.drawCircle(x, y, radius, paint);
+        //canvas.drawCircle(x, y, radius, paint);
         canvas.drawBitmap(image, x - image.getWidth()/2, y - image.getHeight()/2, paint);
     }
 }

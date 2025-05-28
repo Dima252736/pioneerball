@@ -32,7 +32,7 @@ public class Player {
 
     public void draw(Canvas canvas, Paint paint) {
         paint.setColor(color);
-        canvas.drawCircle(x, y, radius, paint);
+//        canvas.drawCircle(x, y, radius, paint);
         canvas.drawBitmap(image, x - image.getWidth()/2, y - image.getHeight()/2, paint);
     }
 }
